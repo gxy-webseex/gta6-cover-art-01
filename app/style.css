@@ -1,0 +1,32 @@
+html, body { margin: 0; height: 100%; background: #12081c; color: #f2eef6; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; height: 100%; padding: 20px 28px; box-sizing: border-box; }
+.preview { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-width: 0; }
+.preview canvas { max-width: 100%; max-height: calc(100vh - 90px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55); touch-action: none; cursor: grab; }
+.preview canvas:active { cursor: grabbing; }
+.hint { margin: 0; color: #b9a8c9; font-size: 13px; }
+.controls { width: 330px; flex: none; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; padding-right: 4px; }
+.controls h1 { margin: 0; font-size: 26px; letter-spacing: 0.5px; }
+.tag { margin: 0; color: #b9a8c9; }
+.group { display: flex; flex-direction: column; gap: 10px; padding: 12px; border: 1px solid #3a2350; border-radius: 10px; background: #1c0b2e; }
+.label { font-weight: 700; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+input[type=text] { font: inherit; padding: 8px; border: 1px solid #5a3a78; border-radius: 6px; background: #12081c; color: #f2eef6; }
+input[type=range] { width: 100%; accent-color: #ff2e88; }
+button { font: inherit; font-weight: 700; padding: 8px 10px; border: 1px solid #5a3a78; border-radius: 6px; background: #2a1342; color: #f2eef6; cursor: pointer; }
+button:hover { background: #3a1c58; }
+.samples { display: flex; gap: 8px; }
+.samples button { flex: 1; }
+.seg { display: flex; gap: 6px; flex-wrap: wrap; }
+.seg button { flex: 1; padding: 7px 4px; font-size: 13px; }
+.seg button.on { background: #ff2e88; border-color: #ff2e88; color: #fff; }
+.thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+.thumb { padding: 2px; border: 2px solid transparent; border-radius: 6px; }
+.thumb.on { border-color: #ff2e88; }
+.thumb img { display: block; width: 64px; height: 64px; object-fit: cover; border-radius: 4px; }
+.export { padding: 12px; font-size: 16px; background: #ff2e88; border-color: #ff2e88; color: #fff; }
+.export:hover { background: #ff4d9c; }
+#status { margin: 0; min-height: 1.2em; color: #ffd76a; font-size: 13px; }
+body.shot-cover .controls, body.shot-cover .hint { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover .preview { width: 100vw; height: 100vh; }
+body.shot-cover canvas { max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; object-fit: contain; box-shadow: none; }
